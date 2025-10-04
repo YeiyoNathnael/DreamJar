@@ -153,7 +153,7 @@ export default function Home() {
         ease: "power2.inOut",
       });
     }
-  }, [isLoading]);
+  });
 
   const totalSaved = calculateTotalSaved(goals);
 
@@ -240,7 +240,7 @@ export default function Home() {
     saveGoals(updatedGoals);
   };
 
-  const handleGoalComplete = (goal: Goal) => {
+  const handleGoalComplete = () => {
     triggerConfettiCelebration();
   };
 
@@ -291,7 +291,7 @@ export default function Home() {
                 {getTimeBasedGreeting()}, Nate!
               </h1>
               <p className="text-purple-200/80 text-xl">
-                Here's your progress 🌙
+                Here is your progress 🌙
               </p>
             </div>
           </div>
